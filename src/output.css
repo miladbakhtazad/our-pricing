@@ -1,4 +1,5 @@
 /*! tailwindcss v4.3.1 | MIT License | https://tailwindcss.com */
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,8 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
+    --spacing: 0.25rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --color-100: hsl(240, 78%, 98%);
+    --color-200: hsl(233, 13%, 49%);
+    --color-300: hsl(237, 63%, 64%);
+    --color-400: hsl(234, 14%, 74%);
   }
 }
 @layer base {
@@ -158,4 +165,176 @@
     display: none !important;
   }
 }
-@layer utilities;
+@layer utilities {
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .top-1 {
+    top: var(--spacing);
+  }
+  .top-1\/2 {
+    top: calc(1 / 2 * 100%);
+  }
+  .top-\[1\] {
+    top: 1;
+  }
+  .top-\[4px\] {
+    top: 4px;
+  }
+  .top-\[10\] {
+    top: 10;
+  }
+  .top-\[10px\] {
+    top: 10px;
+  }
+  .left-\[2px\] {
+    left: 2px;
+  }
+  .mt-\[0px\] {
+    margin-top: 0px;
+  }
+  .mt-\[30px\] {
+    margin-top: 30px;
+  }
+  .mt-\[40px\] {
+    margin-top: 40px;
+  }
+  .flex {
+    display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[24\] {
+    height: 24;
+  }
+  .h-\[24px\] {
+    height: 24px;
+  }
+  .h-\[32\] {
+    height: 32;
+  }
+  .h-\[32px\] {
+    height: 32px;
+  }
+  .h-\[450px\] {
+    height: 450px;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-\[24\] {
+    width: 24;
+  }
+  .w-\[24px\] {
+    width: 24px;
+  }
+  .w-\[56px\] {
+    width: 56px;
+  }
+  .w-\[327\] {
+    width: 327;
+  }
+  .w-\[327px\] {
+    width: 327px;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .gap-\[5px\] {
+    gap: 5px;
+  }
+  .gap-\[15px\] {
+    gap: 15px;
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .rounded-\[4px\] {
+    border-radius: 4px;
+  }
+  .rounded-\[8px\] {
+    border-radius: 8px;
+  }
+  .rounded-\[32px\] {
+    border-radius: 32px;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-e {
+    border-start-end-radius: 0.25rem;
+    border-end-end-radius: 0.25rem;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-100 {
+    background-color: var(--color-100);
+  }
+  .bg-300 {
+    background-color: var(--color-300);
+  }
+  .bg-400 {
+    background-color: var(--color-400);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .text-\[32px\] {
+    font-size: 32px;
+  }
+  .text-200 {
+    color: var(--color-200);
+  }
+  .text-400 {
+    color: var(--color-400);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
+    }
+  }
+}
